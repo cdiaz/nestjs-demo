@@ -1,0 +1,72 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Nest",
+		"_postman_id": "09e92825-2076-4df6-e975-e93e785fa1b9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"url": "localhost:3000/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@demo.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"url": "localhost:3000/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_TOKEN_HERE"
+					}
+				],
+				"body": {}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific User",
+			"request": {
+				"url": "localhost:3000/user/234342",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_TOKEN_HERE"
+					}
+				],
+				"body": {}
+			},
+			"response": []
+		}
+	]
+}

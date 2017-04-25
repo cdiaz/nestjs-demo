@@ -1,0 +1,27 @@
+{
+  "name": "Nest",
+  "author": "Cristiam Diaz",
+  "description": "Modular REST API demo based on Nest Framework",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -w *.*.ts --exec ts-node ./src/main.ts",
+    "build": "npm run clean:dist && tsc && npm run start:prod",
+    "clean:dist": "rm -rf dist",
+    "start:prod": "cd dist && node main.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.2",
+    "jsonwebtoken": "^7.3.0",
+    "nest.js": "^1.0.0-rc8",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.5",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}
