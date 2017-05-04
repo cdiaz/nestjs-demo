@@ -1,7 +1,5 @@
-import { Component } from 'nest.js';
 import * as jwt from 'jsonwebtoken';
 
-@Component()
 export class AuthHelper {
 
 /*******************************************************

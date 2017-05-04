@@ -8,9 +8,8 @@ export class UsersService {
 /*******************************************************
  * Get all Users
  *******************************************************/
-    getAll() {
+    getAllUsers() {
         return new Promise((resolve, reject) => {
-
             db.all(
                 "SELECT * FROM user", function (err, users) {
                 return !err ? 
@@ -24,7 +23,7 @@ export class UsersService {
  * Get One User by Id
  *******************************************************/
 
-    findById(value: any) {
+    getUser(value: any) {
         return new Promise((resolve, reject) => {
             db.all(
                 "SELECT * FROM user WHERE id = ?", [value], (err, user) => {

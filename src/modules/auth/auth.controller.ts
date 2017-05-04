@@ -1,8 +1,8 @@
-import { Controller, Dependencies, Get, Post } from 'nest.js';
+import { Controller, Dependencies, Get, Post, Request, Response, HttpStatus } from 'nest.js';
 import { LoginService } from "./login.service";
 import { SignUpService } from "./signup.service";
 
-@Controller({ path: 'auth' })
+@Controller('auth')
 @Dependencies([ LoginService, SignUpService ])
 
 export class AuthController {
@@ -13,9 +13,8 @@ export class AuthController {
     ) {}
 
     @Post('/login')
-    async login(req, res) {
+    public async login(@Request() req, @Response() res) {
         const auth = await this.loginService.login(req.body.email, req.body.password);
-        res.status(200).json(auth);
+        res.status(HttpStatus.OK).json(auth);
     }
-
 }

@@ -1,7 +1,7 @@
-import { Controller, Dependencies, Get, Post } from 'nest.js';
+import { Controller, Dependencies, Get, Post, Response, Param, HttpStatus } from 'nest.js';
 import { UsersService } from "./users.service";
 
-@Controller({ path: 'user' })
+@Controller('user')
 @Dependencies([ UsersService ])
 
 export class UsersController {
@@ -11,15 +11,14 @@ export class UsersController {
     ) {}
 
     @Get()
-    async getAll(req, res) {
-        const users = await this.usersService.getAll();
-        res.status(200).json(users);
+    public async getAllUsers(@Response() res) {
+        const users = await this.usersService.getAllUsers();
+        res.status(HttpStatus.OK).json(users);
     }
 
     @Get('/:id')
-    async findById(req, res) {
-        const users = await this.usersService.findById(req.params.id);
-        res.status(200).json(users);
-    }
-    
+    public async getUser(@Response() res, @Param('id') id) {
+        const user = await this.usersService.getUser(id);
+        res.status(HttpStatus.OK).json(user);
+    }  
 }
