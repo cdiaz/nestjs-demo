@@ -19,7 +19,7 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
 
-"@types/node@*", "@types/node@^7.0.5":
+"@types/node@*":
   version "7.0.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.13.tgz#1b0a53fe9ef9c3a5d061b126cc9b915bca43a3f5"
 
@@ -1270,9 +1270,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-nest.js@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/nest.js/-/nest.js-1.0.1.tgz#8a47c54eaa40fba6f8a933c5792f2464bf0dbdeb"
+nest.js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/nest.js/-/nest.js-1.0.3.tgz#805e0d186ee5a96596e351ffd05768f607a754e9"
   dependencies:
     cli-color "1.1.0"
     express "4.14.0"
