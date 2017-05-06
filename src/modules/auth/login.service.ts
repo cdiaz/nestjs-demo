@@ -1,5 +1,4 @@
 import { Component, HttpException } from 'nest.js';
-import * as request from 'request';
 import { AuthHelper } from './auth.helper';
 import { db } from '../../db/sqlite';
 
