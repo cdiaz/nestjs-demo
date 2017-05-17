@@ -9,6 +9,7 @@
 /.awcache
 
 # misc
+yarn.lock
 npm-debug.log
 /ts-node-*
 

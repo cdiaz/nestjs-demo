@@ -1,8 +1,8 @@
 /*******************************************************
  * Import dependencies
  *******************************************************/
+import { NestFactory } from '@nestjs/core';
 import * as express from 'express';
-import { NestFactory } from 'nest.js';
 /** Global Middlewares */
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
@@ -17,7 +17,6 @@ import { ApplicationModule } from './app.module';
 const server = express();
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
-server.use(express.static(__dirname + '/'));
 server.use(cors());
 
 /*******************************************************

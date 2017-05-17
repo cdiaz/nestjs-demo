@@ -11,8 +11,9 @@ let sql_user = 'CREATE TABLE IF NOT EXISTS user (' +
     ')';
 
 let sql_populate = 'INSERT OR IGNORE INTO user(id, username, email, password, role)' +
-                   'VALUES (234342, "cdiaz", "test@demo.com", "1234", "admin"),' +
-                   '(254452, "juandav", "test2@demo.com", "1234", "user");';
+                   'VALUES (234342, "cdiaz", "me@cristiamdiaz.com", "1234", "contributor"),' +
+                   '(278928, "KamilMysliwiec", "mail@kamilmysliwiec.com", "12345", "admin"),' +
+                   '(254452, "juandav", "ejuandav@gmail.com", "1234", "user");';
 
 sqlite.serialize(function () {
     sqlite.run(sql_user);

@@ -1,4 +1,5 @@
-import { Component, HttpException } from 'nest.js';
+import { Component } from '@nestjs/common';
+import { HttpException } from '@nestjs/core';
 import { AuthHelper } from './auth.helper';
 import { db } from '../../db/sqlite';
 

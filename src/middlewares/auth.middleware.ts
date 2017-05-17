@@ -1,4 +1,5 @@
-import { HttpException, Middleware, NestMiddleware } from 'nest.js';
+import { Middleware, NestMiddleware } from '@nestjs/common';
+
 import * as jwt from 'jsonwebtoken';
 
 @Middleware()

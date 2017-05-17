@@ -1,9 +1,8 @@
-import { Controller, Dependencies, Get, Post, Request, Response, Body, HttpStatus } from 'nest.js';
+import { Controller, Get, Post, Request, Response, Body, HttpStatus } from '@nestjs/common';
 import { LoginService } from "./login.service";
 import { SignUpService } from "./signup.service";
 
 @Controller('auth')
-@Dependencies([ LoginService, SignUpService ])
 
 export class AuthController {
 

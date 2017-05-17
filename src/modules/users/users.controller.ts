@@ -1,8 +1,8 @@
-import { Controller, Dependencies, Get, Post, Response, Param, HttpStatus } from 'nest.js';
+import { Controller, Get, Post, Request, Response, Param, HttpStatus } from '@nestjs/common';
+
 import { UsersService } from "./users.service";
 
 @Controller('user')
-@Dependencies([ UsersService ])
 
 export class UsersController {
 
